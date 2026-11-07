@@ -139,7 +139,7 @@
     "id": 18,
     "nombre": "MELITON LEZAMA REYES",
     "tipoAgave": "Espadín",
-    "imagen": "imagenes/meliton-lezama-reyes.jpg",
+    "imagen": "imagenes/meliton.jpg",
     "descripcion": "por agregar",
     "destileria": "MELITON LEZAMA REYES"
   },
@@ -155,8 +155,8 @@
     "id": 20,
     "nombre": "LORENZO GARCIA REYES",
     "tipoAgave": "Espadín",
-    "imagen": "imagenes/lorenzo-garcia-reyes.jpg",
+    "imagen": "imagenes/salvador-lezama.jpg",
     "descripcion": "por agregar",
-    "destileria": "LORENZO GARCIA REYES"
+    "destileria": "SALVADOR LEZAMA"
   }
 ]
