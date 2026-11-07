@@ -1,0 +1,381 @@
+:root {
+  --color-hueso: #FDFBF6;
+  --color-arena: #E8E3D8;
+  --color-hueso-suave: #F5FFF6;
+  --color-midnight: #1D3557;
+  --color-agave: #00A896;
+  --color-ambar: #F5A623;
+  --color-carbon: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-hueso);
+  color: var(--color-carbon);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Encabezado adaptado */
+/* =========================================================
+   ESTILOS REVISADOS DEL ENCABEZADO (AJUSTE DE TAMAÑOS)
+   ========================================================= */
+
+header {
+  background-color: var(--color-midnight);
+  color: #fff;
+  padding: 1.8rem 1rem;
+  border-bottom: 4px solid var(--color-ambar);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* 1. Logo Ayuntamiento (Un poco más grande) */
+.header-logo-ayuntamiento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-logo-ayuntamiento img {
+  width: 70px;          /* Aumentado de 50px a 70px */
+  height: 70px;         /* Aumentado de 50px a 70px */
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 4px;
+  margin-bottom: 0.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-subtext {
+  font-size: 0.75rem;
+  color: var(--color-arena);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 2. Logo Feria (MUCHO más grande) */
+.header-logo-feria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo-feria img {
+  width: 110px;         /* Aumentado considerablemente de 60px a 110px */
+  height: 110px;        /* Aumentado de 60px a 110px */
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.header-logo-feria img:hover {
+  transform: scale(1.05);
+}
+
+/* Título Central */
+.header-titulo {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.header-titulo h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-titulo p {
+  color: var(--color-arena);
+  font-size: 1rem;
+}
+
+/* 3. Santo San Dieguito (Derecha) */
+.header-santo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header-santo-container img {
+  width: 65px;          /* Ligero ajuste para guardar proporción */
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--color-ambar);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 0.3rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header-santo-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.4);
+}
+
+.header-santo-label {
+  font-size: 0.75rem;
+  color: var(--color-ambar);
+  font-weight: bold;
+}
+
+/* Contenido Principal */
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  flex-grow: 1;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.titulo-seccion h2 {
+  font-size: 2rem;
+  color: var(--color-midnight);
+}
+
+.titulo-seccion p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+/* Cuadrícula EXACTA de 4 Columnas en escritorio */
+.grid-mezcales {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid-mezcales {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-mezcales {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-mezcales {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tarjeta individual */
+.card {
+  background: #ffffff;
+  border: 1px solid var(--color-arena);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(29, 53, 87, 0.12);
+}
+
+.card-img-container {
+  height: 190px;
+  width: 100%;
+  background: var(--color-arena);
+  overflow: hidden;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-container img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.badge-agave {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: var(--color-hueso-suave);
+  color: var(--color-agave);
+  border: 1px solid rgba(0, 168, 150, 0.3);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+}
+
+.card-body h3 {
+  font-size: 1.2rem;
+  color: var(--color-midnight);
+  margin-bottom: 0.3rem;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.card-footer {
+  padding: 0 1.2rem 1.2rem 1.2rem;
+}
+
+.btn-card {
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--color-agave);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-card:hover {
+  background: #008575;
+}
+
+/* Modal / Ventana Emergente */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 53, 87, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border: 1px solid var(--color-arena);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-midnight);
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--color-ambar);
+}
+
+.modal-img-container {
+  height: 240px;
+  width: 100%;
+  background: var(--color-midnight);
+}
+
+.modal-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-body {
+  padding: 1.8rem;
+}
+
+.modal-body h3 {
+  font-size: 1.5rem;
+  color: var(--color-midnight);
+  margin-top: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.modal-destileria {
+  font-size: 0.9rem;
+  color: var(--color-ambar);
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+}
+
+.modal-descripcion {
+  font-size: 0.95rem;
+  color: var(--color-carbon);
+  line-height: 1.6;
+  border-top: 1px solid var(--color-arena);
+  padding-top: 1.2rem;
+}
+
+/* Pie de página */
+footer {
+  background: var(--color-midnight);
+  color: var(--color-arena);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--color-ambar);
+}

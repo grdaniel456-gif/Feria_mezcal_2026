@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feria Municipal del Mezcal - San Diego La Mesa Tochimiltzingo</title>
+  <!-- CSS Puro -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="header-container">
+      
+      <!-- Izquierda: Logo del Ayuntamiento -->
+      <div class="header-logo-ayuntamiento">
+        <img src="imagenes/logo-ayuntamiento.png" alt="Logo Ayuntamiento" onerror="this.src='https://via.placeholder.com/70x70?text=Ayuntamiento'">
+        <span class="header-subtext">H. Ayuntamiento</span>
+      </div>
+
+      <!-- Medio: Logo de la Feria -->
+      <div class="header-logo-feria">
+        <img src="imagenes/logo-feria.png" alt="Logo Feria del Mezcal" onerror="this.src='https://via.placeholder.com/110x110?text=Feria'">
+      </div>
+
+      <!-- Título Central -->
+      <div class="header-titulo">
+        <h1>Feria del Mezcal</h1>
+        <p>San Diego La Mesa Tochimiltzingo</p>
+      </div>
+
+      <!-- Derecha: Foto de San Dieguito -->
+      <div class="header-santo-container">
+        <img id="btn-santo" src="imagenes/san-dieguito.jpg" alt="San Dieguito" title="Haz clic para ver la historia de San Dieguito" onerror="this.src='https://via.placeholder.com/65x65?text=San+Dieguito'">
+        <span class="header-santo-label">San Dieguito</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <div class="titulo-seccion">
+      <h2>Expositores y Marcas Participantes</h2>
+      <p>Haz clic en cualquier tarjeta para ver la historia y descripción completa</p>
+    </div>
+
+    <!-- CUADRÍCULA -->
+    <div id="mezcales-grid" class="grid-mezcales">
+      <!-- Aquí se inyectan las tarjetas automáticamente desde app.js -->
+    </div>
+  </main>
+
+  <!-- MODAL / VENTANA EMERGENTE PARA LAS TARJETAS DE MEZCAL -->
+  <div id="modal-detalle" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button id="btn-cerrar-modal" class="modal-close">✕</button>
+      
+      <div class="modal-img-container">
+        <img id="modal-img" src="" alt="">
+      </div>
+
+      <div class="modal-body">
+        <!-- SE ELIMINÓ LA ETIQUETA DE TIPO DE AGAVE -->
+        <h3 id="modal-titulo"></h3>
+        <p id="modal-destileria" class="modal-destileria"></p>
+        <p id="modal-descripcion" class="modal-descripcion"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL / VENTANA EMERGENTE PARA LA HISTORIA DE SAN DIEGUITO -->
+  <div id="modal-santo" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button id="btn-cerrar-santo" class="modal-close">✕</button>
+      
+      <div class="modal-img-container">
+        <img id="modal-santo-img" src="imagenes/san-dieguito.jpg" alt="San Dieguito" onerror="this.src='https://via.placeholder.com/400x300?text=San+Dieguito'">
+      </div>
+
+      <div class="modal-body">
+        <span class="badge-agave">Santo Patrono</span>
+        <h3>San Dieguito</h3>
+        <p class="modal-destileria">San Diego La Mesa Tochimiltzingo</p>
+        <p class="modal-descripcion">
+          Aquí irá la historia detallada de San Dieguito, el santo del pueblo, su devoción, las festividades patronales y el significado profundo que tiene para todos los habitantes de San Diego La Mesa Tochimiltzingo, protegiendo las tierras mezcaleras y uniendo a la comunidad año con año.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIE DE PAGINA -->
+  <footer>
+    <p>© Feria del Mezcal. San Diego La Mesa Tochimiltzingo • Apoya a pequeños productores locales.</p>
+  </footer>
+
+  <!-- SCRIPT JS -->
+  <script src="app.js"></script>
+</body>
+</html>
